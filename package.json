@@ -4,7 +4,11 @@
   "description": "Agent de tri des courriels de commandes (Maison Lenoir, données fictives)",
   "type": "module",
   "private": true,
+  "engines": {
+    "node": ">=24.2"
+  },
   "scripts": {
+    "imap:installer": "node scripts/installer-greenmail.ts",
     "imap:demarrer": "node --env-file=.env scripts/demarrer-imap.ts",
     "imap:remplir": "node --env-file=.env scripts/remplir-boite.ts",
     "imap:verifier": "node --env-file=.env scripts/verifier-boite.ts",

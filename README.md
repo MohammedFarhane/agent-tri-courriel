@@ -6,18 +6,21 @@ Les remboursements et gestes commerciaux sont toujours remontés au responsable.
 
 ## Prérequis
 
-- Node.js 24, Java 21, Ollama avec le modèle `qwen2.5:3b` (`ollama pull qwen2.5:3b`)
-- GreenMail (boîte IMAP de test) : `outils/greenmail/greenmail-standalone-2.1.14.jar`
-  (téléchargeable sur Maven Central : `com.icegreen:greenmail-standalone:2.1.14`)
+- **Node.js 24.2 ou plus récent** (le TypeScript est exécuté directement par Node, sans compilation)
+- **Java 21** (pour GreenMail, la boîte IMAP de test)
+- **Ollama** avec le modèle `qwen2.5:3b` : `ollama pull qwen2.5:3b`
 
 ## Installation
 
 ```
 npm install
+npm run imap:installer      (télécharge GreenMail dans outils/ et vérifie son empreinte)
 copy .env.example .env      (puis choisir un mot de passe dans .env)
 ```
 
 ## Lancement
+
+Toutes les commandes se lancent **depuis le dossier du projet** (les chemins `datas/` et `sortie/` en dépendent).
 
 Terminal 1, la boîte IMAP de test (vide à chaque démarrage) :
 ```

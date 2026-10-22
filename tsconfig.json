@@ -1,0 +1,18 @@
+{
+  // Node 24 exécute les fichiers .ts directement (il « efface » les types).
+  // tsc ne sert donc qu'à VÉRIFIER les types : il ne produit aucun fichier (noEmit).
+  "compilerOptions": {
+    "target": "es2023",
+    "module": "nodenext",
+    "moduleResolution": "nodenext",
+    "noEmit": true,
+    "allowImportingTsExtensions": true,
+    "erasableSyntaxOnly": true,
+    "verbatimModuleSyntax": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "types": ["node"]
+  },
+  "include": ["src", "scripts", "tests"]
+}

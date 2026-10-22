@@ -1,0 +1,22 @@
+{
+  "name": "agent-tir-courriel",
+  "version": "1.0.0",
+  "description": "Agent de tri des courriels de commandes (Maison Lenoir, données fictives)",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "imap:demarrer": "node --env-file=.env scripts/demarrer-imap.ts",
+    "imap:remplir": "node --env-file=.env scripts/remplir-boite.ts",
+    "imap:verifier": "node --env-file=.env scripts/verifier-boite.ts",
+    "types": "tsc"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.32.1",
+    "imapflow": "2.2.10",
+    "zod": "4.6.5"
+  },
+  "devDependencies": {
+    "@types/node": "24.19.2",
+    "typescript": "6.0.3"
+  }
+}
